@@ -1,0 +1,30 @@
+python:S3330 | app.py L848 | Make sure creating this cookie without the "HttpOnly" flag is safe.
+python:S2092 | app.py L848 | Make sure creating this cookie without the "secure" flag is safe.
+python:S3330 | app.py L880 | Make sure creating this cookie without the "HttpOnly" flag is safe.
+python:S2092 | app.py L880 | Make sure creating this cookie without the "secure" flag is safe.
+python:S3330 | app.py L898 | Make sure creating this cookie without the "HttpOnly" flag is safe.
+python:S2092 | app.py L898 | Make sure creating this cookie without the "secure" flag is safe.
+python:S5659 | helper/auth.py L39 | Don't use a JWT token without verifying its signature.
+python:S4790 | vulnerabilities/SQLi.py L151 | Make sure that hashing data is safe here.
+docker:S6471 | Dockerfile L1 | The "python" image runs with "root" as the default user. Make sure it is safe here.
+python:S4507 | app.py L913 | Make sure this debug feature is deactivated before delivering the code in production.
+python:S8392 | app.py L913 | Avoid binding the application to all network interfaces.
+javascript:S2068 | init-db.js L8 | Review this potentially hard-coded password.
+javascript:S2068 | init-db.js L12 | Review this potentially hard-coded password.
+python:S4830 | app.py L731 | Enable server certificate validation on this SSL/TLS connection.
+python:S4830 | app.py L723 | Enable server certificate validation on this SSL/TLS connection.
+python:S4830 | app.py L728 | Enable server certificate validation on this SSL/TLS connection.
+python:S4790 | helper/mongodb_manager.py L45 | Make sure that hashing data is safe here.
+python:S2068 | helper/mongodb_manager.py L68 | "password" detected here, review this potentially hard-coded credential.
+python:S2068 | helper/mongodb_manager.py L69 | "password" detected here, review this potentially hard-coded credential.
+docker:S6470 | Dockerfile L4 | Copying recursively might inadvertently add sensitive data to the container. Make sure it is safe here.
+python:S4502 | app.py L28 | Make sure disabling CSRF protection is safe here.
+python:S4790 | helper/db_manager.py L55 | Make sure that hashing data is safe here.
+Web:S5725 | templates/dashboard_layout.html L19 | Add integrity and crossorigin="anonymous" attributes to this element to enforce integrity checks.
+Web:S5725 | templates/dashboard_layout.html L20 | Add integrity and crossorigin="anonymous" attributes to this element to enforce integrity checks.
+Web:S5725 | templates/dashboard_layout.html L21 | Add integrity and crossorigin="anonymous" attributes to this element to enforce integrity checks.
+python:S5247 | app.py L40 | Make sure disabling auto-escaping feature is safe here.
+python:S2245 | app.py L760 | Make sure that using this pseudorandom number generator is safe here.
+Web:S5725 | templates/vulnerabilities/xml-external-entities.html L24 | Add integrity and crossorigin="anonymous" attributes to this element to enforce integrity checks.
+python:S4790 | helper/db_manager.py L47 | Make sure that hashing data is safe here.
+python:S6779 | app.py L29 | Don't disclose "Flask" secret keys.

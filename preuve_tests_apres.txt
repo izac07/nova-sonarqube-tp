@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\LENOVO\tp-sonarqube-nova\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\LENOVO\tp-sonarqube-nova\TIWAP
+collecting ... collected 4 items
+
+tests/test_sqli_low.py::test_identifiants_valides_fonctionnent PASSED    [ 25%]
+tests/test_sqli_low.py::test_mauvais_mot_de_passe_ne_renvoie_rien PASSED [ 50%]
+tests/test_sqli_low.py::test_injection_dans_le_mot_de_passe_neutralisee PASSED [ 75%]
+tests/test_sqli_low.py::test_injection_dans_le_nom_utilisateur_neutralisee PASSED [100%]
+
+============================== 4 passed in 0.11s ==============================

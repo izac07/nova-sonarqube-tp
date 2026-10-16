@@ -1,0 +1,48 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\LENOVO\tp-sonarqube-nova\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\LENOVO\tp-sonarqube-nova\TIWAP
+collecting ... collected 4 items
+
+tests/test_sqli_low.py::test_identifiants_valides_fonctionnent PASSED    [ 25%]
+tests/test_sqli_low.py::test_mauvais_mot_de_passe_ne_renvoie_rien PASSED [ 50%]
+tests/test_sqli_low.py::test_injection_dans_le_mot_de_passe_neutralisee FAILED [ 75%]
+tests/test_sqli_low.py::test_injection_dans_le_nom_utilisateur_neutralisee FAILED [100%]
+
+================================== FAILURES ===================================
+_______________ test_injection_dans_le_mot_de_passe_neutralisee _______________
+
+    def test_injection_dans_le_mot_de_passe_neutralisee():
+>       assert SQLi.sqli_low("alice", "' OR '1'='1") == []
+E       AssertionError: assert [(1, 'alice'), (2, 'bob')] == []
+E         
+E         Left contains 2 more items, first extra item: (1, 'alice')
+E         
+E         Full diff:
+E         - []
+E         + [
+E         +     (...
+E         
+E         ...Full output truncated (8 lines hidden), use '-vv' to show
+
+tests\test_sqli_low.py:40: AssertionError
+_____________ test_injection_dans_le_nom_utilisateur_neutralisee ______________
+
+    def test_injection_dans_le_nom_utilisateur_neutralisee():
+>       assert SQLi.sqli_low("' OR '1'='1' --", "x") == []
+E       AssertionError: assert [(1, 'alice'), (2, 'bob')] == []
+E         
+E         Left contains 2 more items, first extra item: (1, 'alice')
+E         
+E         Full diff:
+E         - []
+E         + [
+E         +     (...
+E         
+E         ...Full output truncated (8 lines hidden), use '-vv' to show
+
+tests\test_sqli_low.py:44: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_sqli_low.py::test_injection_dans_le_mot_de_passe_neutralisee
+FAILED tests/test_sqli_low.py::test_injection_dans_le_nom_utilisateur_neutralisee
+========================= 2 failed, 2 passed in 0.26s =========================
